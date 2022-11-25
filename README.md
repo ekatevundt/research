@@ -9,7 +9,7 @@ public class JvmComprehension {
         Object o = new Object();        // 2 объект создается в куче, а в стеке создается ссылка на него
         Integer ii = 2;                 // 3 тут тоже объект создается в куче, а в стеке - ссылка на него 
         printAll(o, i, ii);             // 4 создается новая память под метод  в стеке, в памяти метода создаются ссылки на объекты o, ii из кучи  
-        System.out.println("finished"); // 7 выполнение main заканчивается, и память для него очищается 
+        System.out.println("finished"); // 7 создается память в стеке под метод println, после чего выполнение main заканчивается, и память для него очищается 
     }
 
     private static void printAll(Object o, int i, Integer ii) {
